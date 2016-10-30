@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 
 export default class GuessInputForm extends Component {
   render() {
+    const { onGuessInputChange } = this.props;
+
     return (
       <section className ='InputForm'>
         <input className = 'guessInput'
           placeholder = 'Your best guess...'
+          onChange = {onGuessInputChange}
           />
 
         <button className = 'guessBtn'
