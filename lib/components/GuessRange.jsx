@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
 
 export default class GuessRange extends Component {
+
+  toggleButtonDisabled(userMinimum, userMaximum) {
+    if(userMinimum.length > 0 && userMaximum > 0){
+      return false;
+    }else{
+      return true;
+    }
+  }
+
   render() {
-    const { userGuess, onMinimumChange, onMaximumChange, generateRandomNumber } = this.props;
+    const { userGuess, onMinimumChange, onMaximumChange, generateRandomNumber, userMinimum, userMaximum } = this.props;
+    const toggleButtonDisabled = this.toggleButtonDisabled(userMinimum, userMaximum);
 
     return (
       <section className = 'guessRangeForm'>
-        <p>Guess a number between:
+        <span>Guess a number between:
         <input className = 'Minimum'
+          placeholder = 'minimum number'
           onChange = {onMinimumChange}
         />
         and
         <input className = 'Maximum'
+          placeholder = 'maximum number'
           onChange = {onMaximumChange}
         />
-        </p>
+        </span>
 
         <button className = 'rangeBtn'
+          disabled = {toggleButtonDisabled}
           onClick = {generateRandomNumber}
-          >Set Range</button>
+          >Set range</button>
       </section>
     );
   }
