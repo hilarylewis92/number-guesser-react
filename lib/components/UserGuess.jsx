@@ -7,10 +7,10 @@ export default class UserGuess extends Component {
 
     return (
       <section className ='userGuessForm'>
-        <p>
+        <p className = 'lastGuess'>
           Your last guess was... { lastGuess }.
         </p>
-        <p>
+        <p className = 'messageHint'>
           { messageHint }
         </p>
       </section>

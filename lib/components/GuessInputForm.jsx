@@ -18,22 +18,23 @@ export default class GuessInputForm extends Component {
       <section className ='InputForm'>
         <input className = 'guessInput'
           placeholder = 'Your best guess...'
-          onChange = {onGuessInputChange}
-          value = {userGuess}
+          onChange = { onGuessInputChange }
+          value = { userGuess }
           type = 'number'
           />
 
         <button className = 'guessBtn'
-          disabled = {toggleDisabledButton}
-          onClick = {submitBtn}
+          disabled = { toggleDisabledButton }
+          onClick = { submitBtn }
           >Guess</button>
 
         <button className = 'clearBtn'
-          disabled = {toggleDisabledButton}
-          onClick = {clearField}>Clear</button>
+          disabled = { toggleDisabledButton }
+          onClick = { clearField }
+          >Clear</button>
 
         <button className = 'resetBtn'
-          onClick = {resetGame}
+          onClick = { resetGame }
           >Reset Game</button>
       </section>
     );
