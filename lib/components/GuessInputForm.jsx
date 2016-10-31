@@ -35,7 +35,7 @@ export default class GuessInputForm extends Component {
 
         <button className = 'resetBtn'
           onClick = { resetGame }
-          >Reset Game</button>
+          >Reset</button>
       </section>
     );
   }
