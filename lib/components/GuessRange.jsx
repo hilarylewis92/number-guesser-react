@@ -21,12 +21,14 @@ export default class GuessRange extends Component {
           placeholder = 'minimum number'
           onChange = {onMinimumChange}
           value = {userMinimum}
+          type = 'number'
         />
         and
         <input className = 'Maximum'
           placeholder = 'maximum number'
           onChange = {onMaximumChange}
           value = {userMaximum}
+          type = 'number'
         />
         </span>
 
