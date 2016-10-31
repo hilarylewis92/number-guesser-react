@@ -19,6 +19,7 @@ export default class GuessInputForm extends Component {
         <input className = 'guessInput'
           placeholder = 'Your best guess...'
           onChange = {onGuessInputChange}
+          value = {userGuess}
           />
 
         <button className = 'guessBtn'
