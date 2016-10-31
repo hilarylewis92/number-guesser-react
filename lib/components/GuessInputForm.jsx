@@ -17,7 +17,7 @@ export default class GuessInputForm extends Component {
     return (
       <section className ='InputForm'>
         <input className = 'guessInput'
-          placeholder = 'Your best guess...'
+          placeholder = 'Guess a number'
           onChange = { onGuessInputChange }
           value = { userGuess }
           type = 'number'
