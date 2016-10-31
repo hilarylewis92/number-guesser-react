@@ -11,7 +11,7 @@ export default class GuessInputForm extends Component {
   }
 
   render() {
-    const { onGuessInputChange, userGuess, clearField, resetGame } = this.props;
+    const { onGuessInputChange, userGuess, clearField, resetGame, submitBtn } = this.props;
     const toggleDisabledButton = this.toggleDisabledButton(userGuess);
 
     return (
@@ -25,6 +25,7 @@ export default class GuessInputForm extends Component {
 
         <button className = 'guessBtn'
           disabled = {toggleDisabledButton}
+          onClick = {submitBtn}
           >Guess</button>
 
         <button className = 'clearBtn'

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class MessageHint extends Component {
   render() {
-    const { userGuess } = this.props;
+    const {} = this.props;
 
     return (
       <section className ='messageHintForm'>
