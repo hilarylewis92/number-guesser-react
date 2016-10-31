@@ -28,9 +28,9 @@ export default class GuessRange extends Component {
         and
         <input className = 'Maximum'
           placeholder = 'max'
+          type = 'number'
           onChange = { onMaximumChange }
           value = { userMaximum }
-          type = 'number'
         />
         </span>
 

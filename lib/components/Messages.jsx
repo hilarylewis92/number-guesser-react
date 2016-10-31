@@ -3,16 +3,21 @@ import React, { Component } from 'react';
 export default class UserGuess extends Component {
 
   render() {
-    const { lastGuess, messageHint } = this.props;
+    const { lastGuess, messageHint, outsideRangeMessage } = this.props;
 
     return (
       <section className ='userGuessForm'>
-        <p className = 'lastGuess'>
+        <span className = 'lastGuess'>
           Your last guess was... { lastGuess }.
-        </p>
-        <p className = 'messageHint'>
+        </span>
+        <span className = 'messageHint'>
           { messageHint }
-        </p>
+        </span>
+        <span>
+          { outsideRangeMessage }
+        </span>
+
+        
       </section>
     );
   }
