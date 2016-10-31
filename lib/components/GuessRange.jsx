@@ -13,6 +13,7 @@ export default class GuessRange extends Component {
 
   render() {
     const { userGuess, onMinimumChange, onMaximumChange, setNewRange, userMinimum, userMaximum, defaultMinimum, defaultMaximum } = this.props;
+
     const toggleButtonDisabled = this.toggleButtonDisabled(userMinimum, userMaximum);
 
     return (
@@ -20,27 +21,31 @@ export default class GuessRange extends Component {
         <span>Guess a number between:
         <input className = 'Minimum'
           placeholder = 'min'
-          onChange = {onMinimumChange}
-          value = {userMinimum}
+          onChange = { onMinimumChange }
+          value = { userMinimum }
           type = 'number'
         />
         and
         <input className = 'Maximum'
           placeholder = 'max'
-          onChange = {onMaximumChange}
-          value = {userMaximum}
+          onChange = { onMaximumChange }
+          value = { userMaximum }
           type = 'number'
         />
         </span>
 
-        <span>Minimum: { defaultMinimum } Maximum: { defaultMaximum }</span>
+        <span className = 'defaultMin'>
+          Minimum: { defaultMinimum }
+        </span>
+        <span className = 'defaultMax'>
+          Maximum: { defaultMaximum }
+        </span>
 
         <button className = 'rangeBtn'
-          disabled = {toggleButtonDisabled}
-          onClick = {setNewRange}
+          disabled = { toggleButtonDisabled }
+          onClick = { setNewRange }
           >Set range</button>
 
-        <span>{}</span>
       </section>
     );
   }
