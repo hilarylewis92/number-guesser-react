@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class GuessRange extends Component {
 
   toggleButtonDisabled(userMinimum, userMaximum) {
-
     if(userMinimum.length > 0 && userMaximum > 0){
       return false;
     }else{
@@ -17,35 +16,34 @@ export default class GuessRange extends Component {
     const toggleButtonDisabled = this.toggleButtonDisabled(userMinimum, userMaximum);
 
     return (
-      <section className = 'guessRangeForm'>
+      <section className='guessRangeForm'>
         <span>Guess a number between:
-        <input className = 'Minimum'
+        <input className='Minimum'
           placeholder = 'min'
-          onChange = { onMinimumChange }
-          value = { userMinimum }
+          onChange = {onMinimumChange}
+          value = {userMinimum}
           type = 'number'
         />
         and
-        <input className = 'Maximum'
+        <input className='Maximum'
           placeholder = 'max'
           type = 'number'
-          onChange = { onMaximumChange }
-          value = { userMaximum }
+          onChange = {onMaximumChange}
+          value = {userMaximum}
         />
         </span>
 
-        <span className = 'defaultMin'>
-          Minimum: { defaultMinimum }
+        <span className='defaultMin'>
+          Minimum: {defaultMinimum}
         </span>
-        <span className = 'defaultMax'>
-          Maximum: { defaultMaximum }
+        <span className='defaultMax'>
+          Maximum: {defaultMaximum}
         </span>
 
-        <button className = 'rangeBtn'
-          disabled = { toggleButtonDisabled }
-          onClick = { setNewRange }
+        <button className='rangeBtn'
+          disabled = {toggleButtonDisabled}
+          onClick = {setNewRange}
           >Set range</button>
-
       </section>
     );
   }

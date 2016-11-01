@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 export default class GuessInputForm extends Component {
-
   toggleDisabledButton(userGuess){
     if(userGuess.length > 0){
       return false;
@@ -15,26 +14,26 @@ export default class GuessInputForm extends Component {
     const toggleDisabledButton = this.toggleDisabledButton(userGuess);
 
     return (
-      <section className ='InputForm'>
-        <input className = 'guessInput'
+      <section className='InputForm'>
+        <input className='guessInput'
           placeholder = 'Guess a number'
-          onChange = { onGuessInputChange }
-          value = { userGuess }
+          onChange = {onGuessInputChange}
+          value = {userGuess}
           type = 'number'
           />
 
-        <button className = 'guessBtn'
-          disabled = { toggleDisabledButton }
-          onClick = { submitBtn }
+        <button className='guessBtn'
+          disabled = {toggleDisabledButton}
+          onClick = {submitBtn}
           >Guess</button>
 
-        <button className = 'clearBtn'
-          disabled = { toggleDisabledButton }
-          onClick = { clearField }
+        <button className='clearBtn'
+          disabled = {toggleDisabledButton}
+          onClick = {clearField}
           >Clear</button>
 
-        <button className = 'resetBtn'
-          onClick = { resetGame }
+        <button className='resetBtn'
+          onClick = {resetGame}
           >Reset</button>
       </section>
     );
