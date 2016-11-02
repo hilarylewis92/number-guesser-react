@@ -11,7 +11,7 @@ export default class GuessRange extends Component {
   }
 
   render() {
-    const { userGuess, onMinimumChange, onMaximumChange, setNewRange, userMinimum, userMaximum, defaultMinimum, defaultMaximum } = this.props;
+    const { userGuess, onMinimumChange, onMaximumChange, setNewRange, userMinimum, userMaximum, defaultMinimum, defaultMaximum, setRangeMessage } = this.props;
 
     const toggleButtonDisabled = this.toggleButtonDisabled(userMinimum, userMaximum);
 
@@ -37,6 +37,10 @@ export default class GuessRange extends Component {
           disabled = {toggleButtonDisabled}
           onClick = {setNewRange}
           >Set range</button>
+
+        <p className='setRangeMessage'>
+          {setRangeMessage}
+        </p>
       </section>
     );
   }
