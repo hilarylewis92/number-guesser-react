@@ -1,27 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+@import 'reset';
+@import 'variables';
+@import 'colors';
 
-@import 'partials/all';
-@import 'modules/all';
-
-* {
+*{
   text-align: center;
   margin: 10px;
+}
+
+body {
+  font-family: 'Open Sans';
 }
 
 button {
   outline: none;
   border: none;
-  background-color: black;
-  color: white;
+  background-color: $color-button-gray;
+  color: $color-button-text-white;
   height: $height-input-button;
   width: $width-input-button;
   font-size: $font-size-default;
   border-radius: $border-radius-default;
 }
 
-// input {
-//   height: $height-input-button;
-//   width: 2 * $width-input-button;
-//   text-align: left;
-//   font-size: $font-size-default;
-//   border-radius: $border-radius-default;
-// }
+input {
+  height: $height-input-button;
+  width: 2 * $width-input-button;
+  text-align: left;
+  font-size: $font-size-default;
+}
+
+.title {
+  font-size: 50px;
+  height: 100%;
+  width: 100%;
+  background-color: $color-header-background-hint-text;
+  padding: 20px;
+}
+
+.number {
+  color: $color-number-text-pink;
+  font-weight: 700;
+}
+
+.guesser{
+  color: $color-guesser-text-cream;
+  font-weight: 300;
+}
