@@ -17,27 +17,20 @@ export default class GuessRange extends Component {
 
     return (
       <section className='guessRangeForm'>
-        <span>Guess a number between:
-        <input className='Minimum'
-          placeholder = 'min'
-          onChange = {onMinimumChange}
-          value = {userMinimum}
-          type = 'number'
-        />
-        and
-        <input className='Maximum'
-          placeholder = 'max'
-          type = 'number'
-          onChange = {onMaximumChange}
-          value = {userMaximum}
-        />
-        </span>
+        <span className='setMinMax'>
+          Min:<input className='Minimum'
+            placeholder = '0'
+            onChange = {onMinimumChange}
+            value = {userMinimum}
+            type = 'number'
+          />
 
-        <span className='defaultMin'>
-          Minimum: {defaultMinimum}
-        </span>
-        <span className='defaultMax'>
-          Maximum: {defaultMaximum}
+        Max:<input className='Maximum'
+            placeholder = '100'
+            type = 'number'
+            onChange = {onMaximumChange}
+            value = {userMaximum}
+          />
         </span>
 
         <button className='rangeBtn'

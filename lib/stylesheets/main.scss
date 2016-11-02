@@ -85,3 +85,17 @@ input {
   font-size: 100px;
   color: $color-button-hover-number-text-pink;
 }
+
+.resetBtn{
+  width: $width-input-button*2;
+}
+
+.guessRangeForm{
+  display: block;
+  margin: 30px auto;
+  width: 60%;
+}
+
+.Maximum, .Minimum {
+  width: $width-input-button/4;
+}
