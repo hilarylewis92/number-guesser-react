@@ -16,7 +16,7 @@ export default class GuessInputForm extends Component {
     return (
       <section className='InputForm'>
         <input className='guessInput'
-          placeholder = 'Guess a number'
+          placeholder = 'Enter your guess'
           onChange = {onGuessInputChange}
           value = {userGuess}
           type = 'number'
@@ -31,10 +31,6 @@ export default class GuessInputForm extends Component {
           disabled = {toggleDisabledButton}
           onClick = {clearField}
           >Clear</button>
-
-        <button className='resetBtn'
-          onClick = {resetGame}
-          >Reset</button>
       </section>
     );
   }

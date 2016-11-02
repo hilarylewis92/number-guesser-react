@@ -11,39 +11,36 @@ export default class GuessRange extends Component {
   }
 
   render() {
-    const { userGuess, onMinimumChange, onMaximumChange, setNewRange, userMinimum, userMaximum, defaultMinimum, defaultMaximum } = this.props;
+    const { userGuess, onMinimumChange, onMaximumChange, setNewRange, userMinimum, userMaximum, defaultMinimum, defaultMaximum, setRangeMessage } = this.props;
 
     const toggleButtonDisabled = this.toggleButtonDisabled(userMinimum, userMaximum);
 
     return (
       <section className='guessRangeForm'>
-        <span>Guess a number between:
-        <input className='Minimum'
-          placeholder = 'min'
-          onChange = {onMinimumChange}
-          value = {userMinimum}
-          type = 'number'
-        />
-        and
-        <input className='Maximum'
-          placeholder = 'max'
-          type = 'number'
-          onChange = {onMaximumChange}
-          value = {userMaximum}
-        />
-        </span>
+        <span className='setMinMax'>
+          Min:<input className='Minimum'
+            placeholder = '0'
+            onChange = {onMinimumChange}
+            value = {userMinimum}
+            type = 'number'
+          />
 
-        <span className='defaultMin'>
-          Minimum: {defaultMinimum}
-        </span>
-        <span className='defaultMax'>
-          Maximum: {defaultMaximum}
+        Max:<input className='Maximum'
+            placeholder = '100'
+            type = 'number'
+            onChange = {onMaximumChange}
+            value = {userMaximum}
+          />
         </span>
 
         <button className='rangeBtn'
           disabled = {toggleButtonDisabled}
           onClick = {setNewRange}
           >Set range</button>
+
+        <p className='setRangeMessage'>
+          {setRangeMessage}
+        </p>
       </section>
     );
   }

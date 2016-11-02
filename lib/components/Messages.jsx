@@ -8,7 +8,7 @@ export default class UserGuess extends Component {
     return (
       <section className='userGuessForm'>
         <span className='lastGuess'>
-          Your last guess was... {lastGuess}.
+          <span className='lastGuessWas'>Your last guess was</span> <span className='lastNumberGuessed'>{lastGuess}</span>
         </span>
 
         <span className='messageHint'>
