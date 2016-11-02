@@ -25,6 +25,10 @@ button {
   font-size: 20px;
 }
 
+button:hover{
+  background-color: $color-button-hover-number-text-pink;
+}
+
 input {
   height: $height-input-button;
   width: 2 * $width-input-button;
@@ -60,4 +64,24 @@ input {
 .InputForm{
   width: 60%;
   margin: auto;
+}
+
+.userGuessForm {
+  width: 50%;
+  margin: 30px auto;
+  height: 200px;
+}
+
+.lastGuessWas{
+  display: block;
+  margin: 30px;
+}
+
+.lastGuess{
+  display: block;
+  margin: 30px;
+}
+.lastNumberGuessed{
+  font-size: 100px;
+  color: $color-button-hover-number-text-pink;
 }
