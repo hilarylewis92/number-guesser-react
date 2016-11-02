@@ -20,7 +20,7 @@ export default class GuessInputForm extends Component {
           onChange = {onGuessInputChange}
           value = {userGuess}
           type = 'number'
-          />
+        />
 
         <button className='guessBtn'
           disabled = {toggleDisabledButton}
