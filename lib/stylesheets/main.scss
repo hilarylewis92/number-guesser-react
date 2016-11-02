@@ -21,6 +21,8 @@ button {
   width: $width-input-button;
   font-size: $font-size-default;
   border-radius: $border-radius-default;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 input {
@@ -28,6 +30,8 @@ input {
   width: 2 * $width-input-button;
   text-align: left;
   font-size: $font-size-default;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 .title {
@@ -46,4 +50,14 @@ input {
 .guesser{
   color: $color-guesser-text-cream;
   font-weight: 300;
+}
+
+.guessInput{
+  display: block;
+  margin: 30px auto;
+
+}
+.InputForm{
+  width: 60%;
+  margin: auto;
 }
