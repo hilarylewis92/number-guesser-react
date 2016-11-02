@@ -1,0 +1,27 @@
+
+@import 'partials/all';
+@import 'modules/all';
+
+* {
+  text-align: center;
+  margin: 10px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  height: $height-input-button;
+  width: $width-input-button;
+  font-size: $font-size-default;
+  border-radius: $border-radius-default;
+}
+
+// input {
+//   height: $height-input-button;
+//   width: 2 * $width-input-button;
+//   text-align: left;
+//   font-size: $font-size-default;
+//   border-radius: $border-radius-default;
+// }
