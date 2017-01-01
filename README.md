@@ -25,9 +25,9 @@ To build the static files:
 npm run build
 ```
 
-
 To run tests in Node:
 
 ```js
 npm test
 ```
+<img src="number-guesser-react.png" alt="number guesser app picture" height="400px">

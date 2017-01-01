@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: {
     main: ['babel-polyfill', './lib/index.js'],
